@@ -17,6 +17,14 @@
             </a>
         </p>
       {{ end }}
+      {{ if .Site.Params.curriculum.file }}
+        {{ $file := printf "mailto:%s" .Site.Params.contact.email}}
+        <p>
+            <a href="{{ .Site.Params.curriculum.file }}" download>
+                {{ .Site.Params.curriculum.text | emojify }}
+            </a>
+        </p>
+      {{ end }}
     </div>
   </div>
 
